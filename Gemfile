@@ -7,7 +7,8 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.2'
 
 # Use sqlite3 as the database for Active Record
-
+gem 'will_paginate', '3.1.7'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
