@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 <<<<<<< HEAD
+<<<<<<< HEAD
   before_action :set_user, only: [:edit, :update, :show]
+=======
+>>>>>>> parent of ffbfa2b... add helper methods for authentication system.
 =======
 >>>>>>> parent of ffbfa2b... add helper methods for authentication system.
   def index
