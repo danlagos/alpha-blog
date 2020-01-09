@@ -33,7 +33,7 @@
             <% if current_user.admin? %>
               <li><%= link_to "Admin Profile", user_path(current_user) %></li>
             <%else %>
-              <li><%= link_to "View profile", user_path(current_user) %></li>   
+              <li><%= link_to "View Profile", user_path(current_user) %></li>   
             <% end %>
           <li><%= link_to "Log out", logout_path, method: :delete %>></li>     
         <% else %>
