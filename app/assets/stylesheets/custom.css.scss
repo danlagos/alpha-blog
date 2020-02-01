@@ -1,7 +1,7 @@
 $navbar-default-bg:  black;
 
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap/dist/css/bootstrap';
 
 #logo {
   float: left;
