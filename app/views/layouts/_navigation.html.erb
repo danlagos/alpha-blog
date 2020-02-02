@@ -20,7 +20,30 @@
         <% if logged_in? %>
           <li><%= link_to "New Article", new_article_path%></li>
         <% end %>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">
+              <%= link_to "All Categories", categories_path%>
+            </a>
+            <% Category.all.each do |category| %>
+              <a class="dropdown-item">
+                <%= link_to "#{category.name}", category_path(category)%>
+              </a>
+            <% end %>
+            <% if logged_in? and current_user.admin? %>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item">
+                <%= link_to "Create New Category", new_category_path %>
+              </a>
+            <% end %>
+          </div>
+        </div>
       </ul>
+      
       <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
