@@ -19,6 +19,9 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+  pool: 50
+  timeout: 5000
+
 
 production:
   <<: *default
